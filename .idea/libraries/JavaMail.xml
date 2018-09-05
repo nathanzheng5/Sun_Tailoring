@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="JavaMail">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/src/Mail/Extern" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

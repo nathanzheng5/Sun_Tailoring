@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Intellij">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/3rdParty/Intellij-other" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/3rdParty/Intellij-other" recursive="false" />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="JavaComm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/3rdParty/comm-2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
