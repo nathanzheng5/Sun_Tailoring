@@ -22,7 +22,7 @@ public class DateRangeTest {
 
         dateRange = DateRange.getToday();
         // todo: replace with today's date
-        assertTrue(dateRange.isInRange("20170629"));
+        assertTrue(dateRange.isInRange("20180905"));
 
         dateRange = DateRange.getTodayPlusDays(3);
         // todo: replace with 3 days from today
