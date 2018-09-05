@@ -225,14 +225,14 @@ public class InvoiceMaker extends JFrame implements InvoiceUpdateListener, Invoi
 
     private void initializeStats() {
         STStatsForm statsForm = new STStatsForm(config, invoiceStore);
-        tabbedPane.add("Stats", statsForm.getTopPanel());
+        tabbedPane.add("    Stats    ", statsForm.getTopPanel());
 
         statsForm.addInvoiceSelectionListener(this);
     }
 
     private void initializeDiag() {
         STDiagForm diagForm = new STDiagForm(config, invoiceStore);
-        tabbedPane.add("Trouble Shoot", diagForm.getTopPanel());
+        tabbedPane.add("    Trouble Shoot    ", diagForm.getTopPanel());
     }
 
     private void initializeAddressBook() {
@@ -1284,11 +1284,12 @@ public class InvoiceMaker extends JFrame implements InvoiceUpdateListener, Invoi
         topPanel = new JPanel();
         topPanel.setLayout(new GridLayoutManager(2, 2, new Insets(0, 0, 0, 0), -1, -1));
         tabbedPane = new JTabbedPane();
-        tabbedPane.setFont(new Font(tabbedPane.getFont().getName(), tabbedPane.getFont().getStyle(), 16));
+        tabbedPane.setFocusable(false);
+        tabbedPane.setFont(new Font(tabbedPane.getFont().getName(), tabbedPane.getFont().getStyle(), 24));
         topPanel.add(tabbedPane, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, new Dimension(200, 200), null, 0, false));
         defaultPanel = new JPanel();
         defaultPanel.setLayout(new GridLayoutManager(5, 5, new Insets(0, 0, 0, 0), -1, -1));
-        tabbedPane.addTab("Default", defaultPanel);
+        tabbedPane.addTab("    Default    ", defaultPanel);
         final JScrollPane scrollPane1 = new JScrollPane();
         scrollPane1.setFont(new Font(scrollPane1.getFont().getName(), Font.BOLD, scrollPane1.getFont().getSize()));
         defaultPanel.add(scrollPane1, new GridConstraints(2, 1, 1, 4, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
@@ -1469,7 +1470,7 @@ public class InvoiceMaker extends JFrame implements InvoiceUpdateListener, Invoi
         defaultPanel.add(quickShirtComboBox, new GridConstraints(0, 3, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         settingsPanel = new JPanel();
         settingsPanel.setLayout(new GridLayoutManager(3, 7, new Insets(0, 0, 0, 0), -1, -1));
-        tabbedPane.addTab("Settings", settingsPanel);
+        tabbedPane.addTab("    Settings    ", settingsPanel);
         setAddressesRadioButton = new JRadioButton();
         setAddressesRadioButton.setText("Addresses");
         settingsPanel.add(setAddressesRadioButton, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
