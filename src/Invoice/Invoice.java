@@ -180,6 +180,27 @@ public class Invoice implements Serializable {
         }
     }
 
+    public void write(ObjectOutput output) throws IOException {
+        output.writeUTF(this.invoiceNum);
+        output.writeLong(this.invoiceDate);
+        output.writeLong(this.dueDate);
+        output.writeUTF(this.customerAddress);
+
+        int size = this.itemList.size();
+        output.writeInt(size);
+        for (ItemListEntry anItem : this.itemList) {
+            Item item = (Item) anItem;
+            output.writeUTF(item.getName());
+            output.writeInt(item.getQuantity());
+            output.writeDouble(item.getUnitPrice());
+        }
+
+        output.writeDouble(this.credit);
+        output.writeBoolean(this.paid);
+        output.writeBoolean(this.done);
+        output.writeBoolean(this.pickedUp);
+    }
+
     public String getInvoiceNum() {
         return invoiceNum;
     }
